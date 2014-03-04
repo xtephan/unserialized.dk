@@ -4,7 +4,8 @@
  *
  * Contains the closing of the id=main div and all content after
  *
- * @package unserialized.dk
+ * @package _s
+ * @since _s 1.0
  */
 ?>
 
@@ -123,6 +124,9 @@
 <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/bootstrap/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr/modernizr.js"></script>
+
+<!-- W3TC-include-js-body-end -->
+<?php wp_footer(); ?>
 
 </body>
 </html>

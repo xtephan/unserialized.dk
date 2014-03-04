@@ -134,7 +134,7 @@ class _sTheme extends BaseTheme {
     public function scripts() {
        $this->addStyle( 'style', get_stylesheet_uri() );
 
-        $this->addScript( 'small-menu', '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+       //$this->addScript( 'small-menu', '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             $this->addScript( 'comment-reply' );

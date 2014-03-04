@@ -2,15 +2,14 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till div.blog-main
+ * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package unserialized.dk
+ * @package _s
+ * @since _s 1.0
  */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta whomadethis="Build with love by Stefan Fodor @ 2014" />
 
@@ -49,12 +48,12 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
 
-    <?php wp_head(); ?>
+    <?php echo wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'before' ); ?>
+<!-- W3TC-include-js-body-start -->
 <header>
     <div class="widewrapper masthead">
         <div class="container">
