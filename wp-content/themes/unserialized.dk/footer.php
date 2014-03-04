@@ -115,7 +115,9 @@
     </div>
     <div class="widewrapper copyright">
         <div class="container">
-            Tales Theme, Designed and Developed by <a href="http://hackerthemes.com">Hackerthemes</a>, Copyright 2013
+            Stefan Fodor @ <?php echo date('Y')?>
+            <span class="sep"> | </span>
+            <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', '_s' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', '_s' ), 'WordPress' ); ?></a>
         </div>
     </div>
 </footer>
