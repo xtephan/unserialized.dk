@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * Add the field for the token at the end of the form
  */
 add_action( 'login_form', function() {
-    include "form.html";
+    include dirname( __FILE__ ) . '/form.html';
 });
 
 /*
@@ -53,9 +53,27 @@ function verify_token( $user, $username, $password ) {
 
     //do the check only if the login did not failed already
     if( !is_wp_error($user) ) {
-        die("Comparing against secret ");
-        //return new WP_Error("hauleu","nu-i a buna");
+
+        //load the required library
+        require_once dirname( __FILE__ ) .'/google_authenticator.php';
+
+        //check if valid
+        $isValid = GoogleAuthenticator::validateToken(
+            get_option('2fa_secret_key'),   //secret
+            $_POST["token"]                 //user submitted token
+        );
+
+        //return result;
+        return $isValid ? $user : new WP_Error("2fa_fail","Invalid Token!");
     }
 
+    //return the original result
     return $user;
+}
+
+/*
+ * Register the admin file
+ */
+if ( is_admin() ) {
+    require_once dirname( __FILE__ ) . '/admin.php';
 }
