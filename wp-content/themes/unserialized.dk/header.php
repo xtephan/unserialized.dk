@@ -53,10 +53,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<!-- W3TC-include-js-body-start -->
+
 <header>
     <div class="widewrapper masthead">
         <div class="container">
+            
             <a href="index.html" id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/tales-logo.png" alt="Tales Blog">
             </a>
@@ -67,32 +68,17 @@
                 </a>
             </div>
 
-            <nav class="pull-right tales-nav">
-                <div class="collapse navbar-collapse">
-                    <ul class="nav nav-pills navbar-nav">
-
-                        <li class="dropdown active">
-                            <a class="dropdown-toggle"
-                               data-toggle="dropdown"
-                               href="#">
-                                Blog
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Blog</a></li>
-                                <li><a href="blog-detail.html">Blog Detail</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                        <li>
-                            <a href="credits.html">Credits</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
+            <nav role="navigation" class="pull-right tales-nav">
+                <?php
+                $menu_args = array(
+                        'theme_location'    => 'primary',
+                        'container'         => 'div',
+                        'container_class'   => 'collapse navbar-collapse',
+                        'menu_class'        => 'nav nav-pills navbar-nav'
+                );
+                wp_nav_menu( $menu_args );
+                ?>
+            </nav><!-- navigation -->
         </div>
     </div>
 
