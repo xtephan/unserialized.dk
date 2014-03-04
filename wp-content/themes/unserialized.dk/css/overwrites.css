@@ -1,0 +1,20 @@
+/*
+* Theme overwrites
+*/
+#logo.icon-terminal {
+    font-size: 35px;
+}
+
+#logo {
+    color: white;
+    font-size: 30px;
+    margin-top: 11px;
+}
+
+.about-portrait {
+    max-width: 250px;
+}
+
+.footer-widget .stats .line {
+    margin-top: 9px;
+}

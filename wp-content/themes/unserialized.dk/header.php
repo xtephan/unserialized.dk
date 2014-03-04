@@ -41,7 +41,9 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css" id="theme-styles">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/overwrites.css">
+
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie8.css">
@@ -57,9 +59,9 @@
 <header>
     <div class="widewrapper masthead">
         <div class="container">
-            
-            <a href="index.html" id="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/tales-logo.png" alt="Tales Blog">
+
+            <a href="/" id="logo">
+                <i class="icon-terminal"></i> unserialized.dk
             </a>
 
             <div id="mobile-nav-toggle" class="pull-right">
