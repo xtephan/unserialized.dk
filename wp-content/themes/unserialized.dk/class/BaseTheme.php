@@ -65,9 +65,9 @@ class BaseTheme
      * Initialize base files
      */
     protected function initBaseFiles() {
-        $this->addScript('modernizr', '/js/modernizr-2.6.2.min.js');
-        $this->addScript('pictureFill', '/js/jquery-picture-min.js', array('jquery'), '', true);
-        $this->addStyle('main', '/stylesheets/main.css');
+        //$this->addScript('modernizr', '/js/modernizr-2.6.2.min.js');
+        //$this->addScript('pictureFill', '/js/jquery-picture-min.js', array('jquery'), '', true);
+        //$this->addStyle('main', '/stylesheets/main.css');
     }
 
     /**
