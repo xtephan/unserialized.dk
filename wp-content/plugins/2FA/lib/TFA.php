@@ -37,6 +37,9 @@ class TFA extends BasicPlugin {
 
         //add filter
         $this->addFilter( 'authenticate', array( 'verifyToken', 100, 3 ) );
+
+        //add menu pages
+        $this->addMenuPage( "2 Factor Authentication", "2 Factor Auth", "tfa_settings", "2fa.php" );
     }
 
     /**
